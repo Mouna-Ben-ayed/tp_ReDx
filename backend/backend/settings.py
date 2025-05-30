@@ -142,17 +142,26 @@ WSGI_APPLICATION = "backend.wsgi.application"
 # }
 
 
+# DATABASES = {
+#     'default': {
+#         'ENGINE': 'django.db.backends.mysql',
+#         'NAME': 'enis_tp',
+#         'USER': 'dbuser',
+#         'PASSWORD': 'DBpassword2024',
+#         'HOST': 'mydb.cbai8wskw2nt.us-east-1.rds.amazonaws.com',
+#         'PORT': 3306,
+#     }
+# }
 DATABASES = {
-    'default': {
+        'default': {
         'ENGINE': 'django.db.backends.mysql',
         'NAME': 'enis_tp',
         'USER': 'dbuser',
         'PASSWORD': 'DBpassword2024',
-        'HOST': 'mydb.cbai8wskw2nt.us-east-1.rds.amazonaws.com',
+        'HOST': 'CHANGE_ME',
         'PORT': 3306,
     }
 }
-
 
 # Password validation
 # https://docs.djangoproject.com/en/4.2/ref/settings/#auth-password-validators
