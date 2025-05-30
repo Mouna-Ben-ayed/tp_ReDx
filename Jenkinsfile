@@ -220,8 +220,7 @@ pipeline {
         success {
             script {
                 def instanceUrl = "http://${EC2_PUBLIC_IP}:81"
-                echo "The instance is successfully deployed. Access it here:
-                ${instanceUrl}"
+                echo "The instance is successfully deployed. Access it here: ${instanceUrl}"
             }
         }
         failure {
