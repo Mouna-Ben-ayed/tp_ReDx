@@ -106,6 +106,8 @@ pipeline {
         }
         stage('Build Frontend Docker Image') {
             steps {
+                sh 'docker --version'
+                sh 'docker-compose --version'
                 dir('frontend') {
                     script {
                         echo 'Building Frontend Docker Image...'
