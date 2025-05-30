@@ -32,13 +32,13 @@ pipeline {
                             returnStdout: true
                             ).trim()
                         // Get RDS Endpoint
+                        
                         RDS_ENDPOINT = sh(
                             script: '''
-                            terraform output rds_endpoint | grep "endpoint" | awk -F'='
-                            '{print $2}' | tr -d '[:space:]"' | sed 's/:3306//'
+                                terraform output rds_endpoint | grep "endpoint" | awk -F'=' '{print $2}' | tr -d '[:space:]"' | sed 's/:3306//'
                             ''',
                             returnStdout: true
-                            ).trim()
+                        ).trim()
                         DEPLOYER_KEY_URI = sh(
                             script: "terraform output deployer_key_s3_uri | tr -d '\"'",
                             returnStdout: true
