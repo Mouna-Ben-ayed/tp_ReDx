@@ -96,7 +96,7 @@ public_key = tls_private_key.example_ssh_key.public_key_openssh
 # Store the SSH private key in an S3 bucket for secure storage ( we can use same bucket of the state )
 # Upload the private key to the S3 bucket
 resource "aws_s3_object" "private_key_object" {
-    bucket = "custom-terraform-state-bucket-123456-ce250382" # Reference existing S3 bucket
+    bucket = "custom-terraform-state-bucket-123456-e41cafbc" # Reference existing S3 bucket
     key = "${var.ssh_key_name}.pem" # Use the same name as the key (with .pem extension)
     content = tls_private_key.example_ssh_key.private_key_pem
     acl = "private"
