@@ -1,5 +1,6 @@
 [servers]
-54.198.102.245 # your ec2 instance public ip address
+#54.198.102.245 # your ec2 instance public ip address
+34.235.157.210
 [servers:vars]
 ansible_python_interpreter=/usr/bin/python3
 ansible_ssh_private_key_file=deployer_key.pem
