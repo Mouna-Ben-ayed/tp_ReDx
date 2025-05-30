@@ -40,10 +40,10 @@ pipeline {
                             returnStdout: true
                             ).trim()
                         DEPLOYER_KEY_URI = sh(
-                            script: 'terraform output deployer_key_s3_uri | tr -d
-                            \'"\'',
+                            script: "terraform output deployer_key_s3_uri | tr -d '\"'",
                             returnStdout: true
-                            ).trim()
+                        ).trim()
+
                         // Debugging: Print captured values
                         echo "EC2 Public IP: ${EC2_PUBLIC_IP}"
                         echo "RDS Endpoint: ${RDS_ENDPOINT}"
