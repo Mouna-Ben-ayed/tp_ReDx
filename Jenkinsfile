@@ -182,7 +182,7 @@ pipeline {
                 script {
                     dir('ansible') {
                         sh """
-                        33if [ -f "hosts" ]; then
+                        if [ -f "hosts" ]; then
                         echo "Found hosts file at \$(pwd)"
                         sed -i "2s|.*|${EC2_PUBLIC_IP}|" hosts
                         echo "Updated hosts file:"
@@ -206,7 +206,7 @@ pipeline {
                         echo "Found playbook docker_deploy_playbook.yml"
                         # Ensure community.docker collection is installed
                         ansible-galaxy collection install community.docker --force
-                        35# Run the Ansible playbook
+                        # Run the Ansible playbook
                         ansible-playbook -i hosts docker_deploy_playbook.yml
                         else
                         echo "Playbook docker_deploy_playbook.yml not found!"
