@@ -14,11 +14,11 @@ terraform {
         }
     }
     backend "s3" {
-    bucket= "custom-terraform-state-bucket-123456-ce250382" # Replace with your S3 bucket name
-    key = "main-architectur/terraform.tfstate" # Location of the state file in the bucket
-    region = "us-east-1" # AWS region
-    dynamodb_table = "custom-terraform-state-locks-123456" # Replace with your DynamoDB table name
-    encrypt = true # Enables encryption for the state file
+        bucket= "custom-terraform-state-bucket-123456-ce250382" # Replace with your S3 bucket name
+        key = "main-architectur/terraform.tfstate" # Location of the state file in the bucket
+        region = "us-east-1" # AWS region
+        dynamodb_table = "custom-terraform-state-locks-123456" # Replace with your DynamoDB table name
+        encrypt = true # Enables encryption for the state file
     }
 }
 # AWS provider configuration
