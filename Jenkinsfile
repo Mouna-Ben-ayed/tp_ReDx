@@ -9,6 +9,8 @@ pipeline {
         ECR_REPO_URL = '682033493357.dkr.ecr.us-east-1.amazonaws.com'
         ECR_REPO_NAME = 'enis-app'
         IMAGE_REPO = "${ECR_REPO_URL}/${ECR_REPO_NAME}"
+        IMAGE_REPO_FRONTEND = "${IMAGE_REPO}:frontend-1.0"
+        IMAGE_REPO_BACKEND = "${IMAGE_REPO}:backend-1.0"
         AWS_REGION = "us-east-1"
     }
     stages {
